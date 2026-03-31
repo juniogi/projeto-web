@@ -1,0 +1,119 @@
+.detalhe {
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: #8b5e3c;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  color: #4a2c2a;
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.product-category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #8b5e3c;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.product-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #4a2c2a;
+  margin: 0;
+}
+
+.product-description {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.product-price-box {
+  background: #fdf6ec;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.price-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.price-value {
+  font-size: 2rem;
+  color: #2a7d4f;
+  font-weight: 700;
+}
+
+.product-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.product-actions .btn {
+  flex: 1;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .product-detail {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.2rem;
+  }
+
+  .product-name {
+    font-size: 1.3rem;
+  }
+
+  .price-value {
+    font-size: 1.5rem;
+  }
+
+  .product-actions {
+    flex-direction: column;
+  }
+}

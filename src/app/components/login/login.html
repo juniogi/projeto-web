@@ -1,0 +1,25 @@
+<section class="login-page">
+  <div class="container">
+    <div class="login-wrapper">
+      <div class="login-box">
+        <h2 class="box-title">Já tenho cadastro</h2>
+        <div class="form-group mb-3">
+          <label>Email</label>
+          <input type="email" class="form-control" [(ngModel)]="email" placeholder="seu@email.com" />
+        </div>
+        <div class="form-group mb-3">
+          <label>Senha</label>
+          <input type="password" class="form-control" [(ngModel)]="senha" placeholder="Sua senha" />
+        </div>
+        <button class="btn btn-warning w-100 mb-3" (click)="onLogin()">Entrar</button>
+        <a routerLink="/esqueci-senha" class="forgot-link">Esqueci minha senha</a>
+      </div>
+
+      <div class="register-box">
+        <h2 class="box-title">Ainda não tenho cadastro</h2>
+        <p>Crie sua conta e aproveite nossas delícias!</p>
+        <a routerLink="/cadastro" class="btn btn-outline-warning btn-lg">Clique Aqui</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<section class="esqueci-page">
+  <div class="container">
+    <h2 class="page-title">Esqueci Minha Senha</h2>
+
+    <div class="esqueci-box" *ngIf="!enviado">
+      <p>Informe o seu email e enviaremos as instruções para redefinir sua senha.</p>
+      <div class="form-group mb-3">
+        <label>Email</label>
+        <input type="email" class="form-control" [(ngModel)]="email" placeholder="seu@email.com" />
+      </div>
+      <button class="btn btn-warning btn-lg w-100" (click)="onEnviar()">Enviar</button>
+      <p class="back-link">
+        <a routerLink="/login">Voltar ao login</a>
+      </p>
+    </div>
+
+    <div class="esqueci-box success" *ngIf="enviado">
+      <h3>Email enviado!</h3>
+      <p>Verifique sua caixa de entrada para redefinir sua senha.</p>
+      <a routerLink="/login" class="btn btn-warning btn-lg">Voltar ao Login</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,140 @@
+.cesta {
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #4a2c2a;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #f5c518;
+  display: inline-block;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.empty-cart h3 {
+  color: #4a2c2a;
+  margin-bottom: 0.5rem;
+}
+
+.empty-cart p {
+  color: #999;
+  margin-bottom: 1.5rem;
+}
+
+.table {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.table thead {
+  background: #4a2c2a;
+  color: #f5c518;
+}
+
+.table thead th {
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+}
+
+.table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #f0e8dc;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.item-name {
+  font-weight: 600;
+  color: #3d2c2c;
+}
+
+.btn-remove {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-remove:hover {
+  text-decoration: underline;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+.total-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4a2c2a;
+}
+
+.total-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2a7d4f;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.cart-actions .btn {
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .item-image {
+    width: 45px;
+    height: 45px;
+  }
+
+  .cart-total {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .cart-actions {
+    flex-direction: column;
+  }
+
+  .cart-actions .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,37 @@
+<section class="vitrine">
+  <div class="container">
+    <div class="hero-banner">
+      <h1>Bem-vindo à <span class="highlight">Padaria Online</span></h1>
+      <p>Pães frescos, bolos artesanais e muito mais, direto pra sua casa!</p>
+    </div>
+
+    <h2 class="section-title">Nossos Produtos</h2>
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-4" *ngFor="let product of products">
+        <div class="product-card">
+          <a [routerLink]="['/produto', product.id]">
+            <div class="product-image">
+              <img [src]="product.image" [alt]="product.name" />
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-category">{{ product.category }}</span>
+            <h3 class="product-name">
+              <a [routerLink]="['/produto', product.id]">{{ product.name }}</a>
+            </h3>
+            <div class="product-footer">
+              <span class="product-price">{{ formatPrice(product.price) }}</span>
+              <button
+                class="btn-comprar"
+                [class.added]="addedProductId === product.id"
+                (click)="addToCart(product, $event)"
+              >
+                {{ addedProductId === product.id ? 'Adicionado!' : 'Comprar' }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+<section class="busca">
+  <div class="container">
+    <h2 class="search-heading">
+      Pesquisa por: <span class="search-term">{{ searchTerm }}</span>
+    </h2>
+    <p class="results-count" *ngIf="results.length > 0">
+      {{ results.length }} produto(s) encontrado(s)
+    </p>
+
+    <div class="no-results" *ngIf="results.length === 0 && searchTerm">
+      <h3>Nenhum produto encontrado</h3>
+      <p>Tente buscar por outro termo</p>
+      <a routerLink="/" class="btn btn-warning">Voltar à Vitrine</a>
+    </div>
+
+    <div class="row" *ngIf="results.length > 0">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-4" *ngFor="let product of results">
+        <div class="product-card">
+          <a [routerLink]="['/produto', product.id]">
+            <div class="product-image">
+              <img [src]="product.image" [alt]="product.name" />
+            </div>
+          </a>
+          <div class="product-info">
+            <span class="product-category">{{ product.category }}</span>
+            <h3 class="product-name">
+              <a [routerLink]="['/produto', product.id]">{{ product.name }}</a>
+            </h3>
+            <div class="product-footer">
+              <span class="product-price">{{ formatPrice(product.price) }}</span>
+              <button
+                class="btn-comprar"
+                [class.added]="addedProductId === product.id"
+                (click)="addToCart(product, $event)"
+              >
+                {{ addedProductId === product.id ? 'Adicionado!' : 'Comprar' }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

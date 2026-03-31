@@ -1,0 +1,28 @@
+<header class="main-header">
+  <div class="container">
+    <div class="header-content">
+      <a routerLink="/" class="logo">
+        🥖 <span class="logo-text">Padaria Online</span>
+      </a>
+
+      <div class="search-bar">
+        <input
+          type="text"
+          [(ngModel)]="searchTerm"
+          (keydown)="onSearchKeydown($event)"
+          placeholder="O que você procura?"
+          class="form-control"
+        />
+        <button class="btn btn-warning" (click)="onSearch()">Buscar</button>
+      </div>
+
+      <div class="header-actions">
+        <a routerLink="/cesta" class="btn-cart" title="Cesta">
+          🛒
+          <span class="cart-badge" *ngIf="cartCount > 0">{{ cartCount }}</span>
+        </a>
+        <a routerLink="/login" class="btn-user" title="Minha Conta">👤</a>
+      </div>
+    </div>
+  </div>
+</header>

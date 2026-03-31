@@ -1,0 +1,28 @@
+<nav class="main-nav">
+  <div class="container">
+    <button class="menu-toggle" (click)="toggleMenu()">☰ Menu</button>
+    <ul class="nav-list" [class.open]="menuOpen">
+      <li>
+        <a routerLink="/" (click)="menuOpen = false">Todos</a>
+      </li>
+      <li>
+        <a routerLink="/busca" [queryParams]="{q: 'Bolos'}" (click)="menuOpen = false">Bolos</a>
+      </li>
+      <li>
+        <a routerLink="/busca" [queryParams]="{q: 'Pães'}" (click)="menuOpen = false">Pães</a>
+      </li>
+      <li>
+        <a routerLink="/busca" [queryParams]="{q: 'Doces'}" (click)="menuOpen = false">Doces</a>
+      </li>
+      <li>
+        <a routerLink="/busca" [queryParams]="{q: 'Salgados'}" (click)="menuOpen = false">Salgados</a>
+      </li>
+      <li>
+        <a routerLink="/busca" [queryParams]="{q: 'Torta Salgada'}" (click)="menuOpen = false">Tortas Salgadas</a>
+      </li>
+      <li>
+        <a routerLink="/busca" [queryParams]="{q: 'Torta Doce'}" (click)="menuOpen = false">Tortas Doces</a>
+      </li>
+    </ul>
+  </div>
+</nav>
