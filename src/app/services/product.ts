@@ -27,7 +27,7 @@ export class ProductService {
       id: 3,
       name: 'Bolo de Limão',
       price: 38.00,
-      description: 'Bolo de limão com cobertura de glacê cítrico. Refrescante e leve. Serve até 8 pessoas.',
+      description: 'Bolo de limão com cobertura de limão e raspas. Refrescante e leve. Serve até 8 pessoas.',
       image: 'Bolo_de_limao.jpg',
       category: 'Bolos'
     },
@@ -51,7 +51,7 @@ export class ProductService {
       id: 6,
       name: 'Bolo de Fubá',
       price: 30.00,
-      description: 'Bolo de fubá fofinho com erva-doce. Perfeito para acompanhar um cafézinho. Serve até 8 pessoas.',
+      description: 'Bolo de fubá fofinho. Perfeito para acompanhar um cafézinho. Serve até 8 pessoas.',
       image: 'Bolo_de_fuba.jpg',
       category: 'Bolos'
     },
